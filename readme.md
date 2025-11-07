@@ -69,20 +69,6 @@ Parent: Pipe closed by child (EOF reached)
 [TOTAL BYTES FILE: 1523]
 ```
 
-## Configuration
-
-### Buffer Size
-```c
-#define CHAR_BUFFER 1000
-```
-Defines the chunk size for file reading operations. Can be adjusted based on needs.
-
-### Signal Handling
-```c
-#define HANDLE_INT
-```
-Enables SIGINT handling. Comment out to disable interrupt handling.
-
 ## Key Functions
 
 ### `check_and_add_txt_extension(char *filename)`
@@ -98,27 +84,9 @@ The program handles several error conditions:
 - File read errors
 - Invalid file access
 
-## Technical Details
-
-- **IPC Method**: Unix pipes (`pipe()` system call)
-- **Process Creation**: `fork()` system call
-- **File I/O**: Standard C library (`fread()`)
-- **Low-level I/O**: Unix system calls (`read()`, `write()`)
-
 ## Improvements Suggested
-
-1. More check on user exception like ctrl+z && kill 
-
-## Dependencies
-
-- POSIX-compliant system (Linux, macOS, Unix)
-- Standard C library
-- System headers: `unistd.h`, `sys/wait.h`, `sys/types.h`, `signal.h`
-
-## License
-
-Educational/Academic use
-
+1. More check on user exception like ctrl+z && kill
+   
 ## Author
 
 Created by framrt as a demonstration of Unix IPC concepts and process management.
