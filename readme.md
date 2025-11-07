@@ -121,4 +121,4 @@ Educational/Academic use
 
 ## Author
 
-Created as a demonstration of Unix IPC concepts and process management.
+Created by framrt as a demonstration of Unix IPC concepts and process management.
